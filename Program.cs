@@ -33,8 +33,8 @@ namespace CountCodeLine
                 Console.WriteLine(Usage);
                 return;
             }
-
-            VisitDirectory(_rootFolder);
+             
+            Console.WriteLine($"Total: {VisitDirectory(_rootFolder)} line(s).");
 
             Console.WriteLine($"Time: {(DateTime.Now - start).TotalMilliseconds:F0} ms.");
         }
@@ -46,7 +46,7 @@ namespace CountCodeLine
                 return false;
             }
 
-            _rootFolder = args[0];
+            _rootFolder = args[0].TrimEnd('\\', '/');
 
             _suffixs = args.Where(x => x.StartsWith(".")).Select(x => x.Split('.').Last()).ToList();
 
