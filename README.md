@@ -8,7 +8,7 @@ Utility for counting code line's count.
 ## Params
 RootFolder: Folder to count.
 
-Suffix: Suffix of code file.Start with '.'.
+Suffix: Suffix of code file. Start with '.'.
 
 Options:
 * --ignore-blank, -I: Ignore blank lines.
@@ -19,3 +19,6 @@ Options:
 	ccl ProjectRoot .cpp .c .h -V -I
 
 This will count all **.cpp/.c/.h file**s' **non-blank line**s' count in folder **ProjectRoot**, and **log will be print** during the procedures.
+
+## Binaries
+[Windows](http://www.vicey.cn/files/ccl.exe)
