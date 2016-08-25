@@ -8,13 +8,13 @@ namespace CountCodeLine
     public class Program
     {
         private static string Usage { get; } =
-            "Usage: CountCodeLine <root folder> <suffix> [<suffix>,...] [<options>]\n" +
-            "Count code line in target folder.\n" +
-            "Root folder: Folder to count.\n" +
+            "Utility for counting code line's count.\n" +
+            "Usage: ccl <RootFolder> <Suffix> [<Suffix>,...] [<Options>]\n" +
+            "RootFolder: Folder to count.\n" +
             "Suffix: Suffix of code file.Start with '.'.\n" +
             "Options:\n" +
             "--ignore-blank, -I    Ignore blank lines.\n" +
-            "--verbose, -V         Show process log\n";
+            "--verbose, -V         Show process log.\n";
 
         private static string _rootFolder;
 
