@@ -17,7 +17,7 @@ namespace CountCodeLine
 
         private static string _rootFolder;
 
-        private static readonly List<string> _suffixs = new List<string>();
+        private static readonly List<string> Suffixs = new List<string>();
 
         private static bool _countBlank;
 
@@ -78,7 +78,7 @@ namespace CountCodeLine
                         }
                         default:
                         {
-                            _suffixs.Add(arg);
+                            Suffixs.Add(arg);
                             continue;
                         }
                     }
@@ -118,7 +118,7 @@ namespace CountCodeLine
                         .Where(dir => !dir.Split('/', '\\').LastOrDefault()?.StartsWith(".") ?? false);
                 var count = dirs.Sum(VisitDirectory);
 
-                var files = Directory.GetFiles(path).Where(file => _suffixs.Any(suffix => suffix == file.Split('.').LastOrDefault()));
+                var files = Directory.GetFiles(path).Where(file => Suffixs.Any(suffix => suffix == file.Split('.').LastOrDefault()));
                 count += files.Sum(VisitFile);
 
                 if (_verbose && count > 0) Console.WriteLine($"{path}: {count} line(s).");
