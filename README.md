@@ -11,12 +11,13 @@ RootFolder: Folder to count.
 Suffix: Suffix of code file. Start with '.'.
 
 Options:
-* --ignore-blank, -I: Ignore blank lines.
-* --verbose, -V: Show process log.
+* --blank-lines, -b       Count blank lines.
+* --hidden-folders, -f    Count hidden folders (Start with '.').
+* --verbose, -v           Show process log.
 
 ## Example
 
-	ccl ProjectRoot .cpp .c .h -V -I
+	ccl ProjectRoot cpp c h -v
 
 This will count all **.cpp/.c/.h file**s' **non-blank line**s' count in folder **ProjectRoot**, and **log will be print** during the procedures.
 
